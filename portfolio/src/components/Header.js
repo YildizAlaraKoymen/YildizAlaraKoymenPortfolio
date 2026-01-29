@@ -25,7 +25,6 @@ const socials = [
 ];
 
 const Header = () => {
-  const baseUrl = process.env.PUBLIC_URL || "";
   const headerRef = useRef(null)
   const prevScrollY = useRef(0)
 
@@ -96,13 +95,13 @@ const Header = () => {
             <HStack spacing={8}>
               {/* Add links to Projects and Contact me section */}
               <a
-                href={`${baseUrl}/#contact-me`}
+                href="#contact-me"
                 onClick={handleClick(`contactme`)}
               >
                 <h3>Contact Me</h3>
               </a>
               <a
-                href={`${baseUrl}/#projects`}
+                href="#projects"
                 onClick={handleClick(`projects`)}
               >
                 <h3>Projects</h3>
