@@ -5,28 +5,18 @@ import Card from "./Card";
 
 const projects = [
   {
-    title: "React Space",
+    title: "DynaZOR",
     description:
-      "Handy tool belt to create amazing AR components in a React app, with redux integration via middleware️",
-    getImageSrc: () => require("../images/photo1.jpg"),
+      "DynaZOR is a cloud-based scheduling and rendezvous system designed to automate appointment management between users. The goal is to eliminate manual scheduling errors and reduce communication delays by using AWS services for storing data and notifications.",
+    url: "https://github.com/YildizAlaraKoymen/DynaZOR",
+    getImageSrc: () => require("../images/photo1.png"),
   },
   {
-    title: "React Infinite Scroll",
+    title: "Human Activity Recognition (HAR) System",
     description:
-      "A scrollable bottom sheet with virtualisation support, native animations at 60 FPS and fully implemented in JS land 🔥️",
-    getImageSrc: () => require("../images/photo2.jpg"),
-  },
-  {
-    title: "Photo Gallery",
-    description:
-      "A One-stop shop for photographers to share and monetize their photos, allowing them to have a second source of income",
-    getImageSrc: () => require("../images/photo3.jpg"),
-  },
-  {
-    title: "Event planner",
-    description:
-      "A mobile application for leisure seekers to discover unique events and activities in their city with a few taps",
-    getImageSrc: () => require("../images/photo4.jpg"),
+      "(In progress, graduation project) Edge-computable Human Activity Recognition system built with wearable IMU sensors, a Raspberry Pi hub, a mobile Activity Labeling App, and a Unity-based visualisation environment.",
+    url: "https://github.com/YildizAlaraKoymen",
+    getImageSrc: () => require("../images/photo2.png"),
   },
 ];
 
@@ -48,12 +38,19 @@ const ProjectsSection = () => {
         gridGap={8}
       >
         {projects.map((project) => (
-          <Card
+          <Box 
             key={project.title}
-            title={project.title}
-            description={project.description}
-            imageSrc={project.getImageSrc()}
-          />
+            bg="white"
+            borderRadius="md"
+            height="500px"
+          >
+            <Card
+              title={project.title}
+              description={project.description}
+              url={project.url}
+              imageSrc={project.getImageSrc()}
+            />
+          </Box>
         ))}
       </Box>
     </FullScreenSection>
